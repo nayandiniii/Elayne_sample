@@ -1,0 +1,77 @@
+<!DOCTYPE hmtl>
+<html>
+    <head>
+        <title>Elayne | Home</title>
+        <link rel="stylesheet" href="ell.css">
+        <link rel="icon" type="image/x-icon" href="eicon.png">
+    </head>
+    <body>
+    <h1><b><i> E L A Y N E</i></b></h1>
+    <br>
+    <p>This is a palce for the people who love ART!<br>
+    Content specially made for people who are interested not only in painting or sketching or writing but so much more.<br>
+    Get to explore the best content there is from the worldwide famous artists and our own users. You can go through everything that is there in this world
+    and keep yourself and the people here updated ! <br><br>
+    What do we provide you with?<br>
+   </p><br>
+   <table class="center">
+    <tr><b><i>
+        <th colspan="2">CONTENTS</th>
+        <th>DESCRIPTION</th>
+    </i></b></tr>
+    <tr>
+        <td>Around the world</td>
+        <td>The Celebs</td>
+        <td>From the best artists of all time, we have everything there i about their work.</td>
+    </tr>
+    <tr>
+        <td>Paint your heart</td>
+        <td>Never Stop</td>
+        <td>Painting is ofcourse an expression, find the paintings that our artists have created with all their heart.</td>
+    </tr>
+</table>
+<img class="center1" src="eicon.png" height="200px" width="200px" >
+<h2><b>FACTS ABOUT US:</b></h2><br>
+<ul>
+    <li>Made by students as a project work.</li>
+    <li>Under the guidance of Christ University.</li>
+    <li>Based in Bengaluru.</li>
+</ul>
+<br><br>
+<h3>Check these out ( Click on them!)</h3>
+<marquee behavior="scroll">
+    <a href="https://www.bocadolobo.com/blog/" target="_blank"><img src="ar1.jpg" height="200px" width="300px"><img src="ar2.jpg" height="200px" width="300px"><img src="ar3.jpg" height="200px" width="300px">
+        <img src="ar4.jpg" height="200px" width="300px"><img src="ar5.jpg" height="200px" width="300px"><img src="ar6.jpg" height="200px" width="300px"><img src="ar7.jpg" height="200px" width="300px">
+        <img src="ar8.jpg" height="200px" width="300px"><img src="ar9.jpg" height="200px" width="300px"><img src="ar10.jpg" height="200px" width="300px"></a>
+</marquee><br><br>
+<img src="collage.png" usemap="#colmap" width="1126" height="800" class="center1">
+<map name="colmap">
+    <area shape="rect" coords="1,1,370,390" href="ar4.jpg" target="_blank">
+    <area shape="rect" coords="376,2,747,392" href="ar7.jpg" target="_blank">
+    <area shape="rect" coords="752,0,1124,390" href="ar5.jpg" target="_blank">
+    <area shape="rect" coords="5,401,369,796" href="ar6.jpg" target="_blank">
+    <area shape="rect" coords="377,402,747,796" href="ar8.jpg" target="_blank">
+    <area shape="rect" coords="757,407,1123,793" href="ar3.jpg" target="_blank">
+</map><br><br>
+<h2><b>Pen It Down</b></h2><br>
+<h3>For Poems ,you can either visit us at <a href="ell2.html" target="_blank">Elayne Poetry </a> OR <a href="https://www.poetryfoundation.org/poems/browse#page=1&sort_by=recently_added" target="_blank">Here.</a></h3>
+<h3>For Stories , you can either visit us at <a href="ell3.html" target="_blank"> Elayne Stories </a>OR <a href="https://www.storynory.com/category/stories/page/2/" target="_blank">Here</a></h3>
+<form>
+    <label for="f">First Name: </label>
+    <input type="text" id="f" name="f"><br>
+    <label for="l">Last Name: </label>
+    <input type="text" id="l" name="l"><br>
+    <label for="ag">Age: </label>
+    <input type="number" id="ag" name="ag"><br>
+    <label for="g">Gender: </label>
+    <input type="text" id="g" name="g"><br>
+    <label for="n">E-Mail: </label>
+    <input type="text" id="n" name="n"><br>
+    <input type="submit" value="OK">
+
+</form>
+</body>
+<footer>
+    <h3>Created By @Nandini</h3>
+</footer>
+</html>
