@@ -1,0 +1,77 @@
+@font-face {
+    font-family: bebas;
+    src: url(bebas.ttf);
+}
+@font-face {
+    font-family: manrope;
+    src: url(manrope.otf);
+}
+h1{
+    font-family: bebas;
+    font-size: 65px;
+    color: rgb(153, 38, 153);
+    text-align: center;
+    text-shadow: 2px 2px 4px cyan;
+}
+p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: white;
+    background-color: rgb(79, 209, 209);
+    border: 3.5px solid rgb(153, 38, 153);
+    text-align: center;
+}
+table,tr,th,td{
+    background-color: black;
+    border: 2px solid rgb(153, 38, 153);
+    border-collapse: collapse;
+    color: rgb(153, 38, 153);
+    padding: 5px;
+    margin: 2px;
+}
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+.center1 {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+h2{
+    color: rgb(153, 38, 153);
+    background-color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    text-align: center;
+}
+li{
+    color: rgb(79, 209, 209);
+    font-size: 20px;
+    text-align: center;
+}
+h3{
+    background-color: black;
+    color: rgb(79, 209, 209);
+    text-shadow: 2px 2px 4px rgb(153, 38, 153);
+    text-align: center;
+}
+body{
+    background-color: black;
+}
+form{
+    background-color: black;
+    color: rgb(153, 38, 153);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    text-align: center;
+}
+input{
+    background-color: black;
+    color: rgb(79, 209, 209);
+}
+footer{
+    background-color: black;
+    color: rgb(79, 209, 209);
+    border: 3px solid rgb(153, 38, 153) ;
+}
