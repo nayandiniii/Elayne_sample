@@ -1,0 +1,101 @@
+<!DOCTYPE hmtl>
+<html>
+    <head>
+        <title>Elayne | Home</title>
+        <link rel="stylesheet" href="ell.css">
+        <link rel="icon" type="image/x-icon" href="huge.png">
+    </head>
+    <body>
+    <h1><b><i> E L A Y N E</i></b></h1>
+<body>
+    <h1><b> POTERY </b></h1>
+    <div id="left1">
+      <table class="tab2"><b><i>
+        <th>MENU</th>
+        <tr>
+        <td><a href="ell.html" target="_blank">HOME</a></td></tr>
+        <tr>
+            <td><a href="ell4.html" target="_blank">PHOTOGRAPHY</a></td></tr>
+        <tr>
+            <td><a href="ell2.html" target="_blank">POETRY</a></td></tr>
+        <tr>
+            <td><a href="ell3.html" target="_blank">STORIES</a></td></tr>
+      </i></b>
+      </table>
+    </div><br><br>
+    <div id="middle">
+        <marquee behavior="scroll" scrollamount="5" >
+            <img src="p1.avif" height="200px" width="200px"> <img src="p2.avif" height="200px" width="200px"> <img src="p3.avif" height="200px" width="200px"> <img src="p4.avif" height="200px" width="200px"><br><br>
+            <img src="p5.avif" height="200px" width="200px"> <img src="p6.avif" height="200px" width="200px"> <img src="p7.avif" height="200px" width="200px"> <img src="p8.avif" height="200px" width="200px"></marquee>
+
+    </div><br><br>
+   <div class="right">
+      <img src="po1.webp" height="200px" width="200px"><img src="po2.webp" height="200px" width="200px"><br>
+      <img src="po3.webp" height="200px" width="200px"><img src="po4.jpeg" height="200px" width="200px"><br>
+   </div><br><br>
+  
+   <table class="tab3"><b><i>
+    <th>AUDIOBOOKS</th>
+    <tr>
+    <td>Marie   <audio src="marie.mp3" controls=controls></audio></td></tr>
+    <tr>
+        <td>Everyman   <audio src="everyman.mp3" controls=controls></audio></td></tr>
+    <tr>
+        <td>The Lost Boy   <audio src="lost.mp3" controls=controls></audio></td></tr>
+  </i></b></table><br><br><br>
+  <h2>Videos</h2>
+   <marquee behavior="scroll" scrollamount="6" repeat="yes">
+    <video height="400px" width="700px" controls><source src="vv1.mp4" type="video/mp4"></video> <video height="400px" width="700px" controls><source src="vv2.mp4" type="video/mp4"> </video><video height="400px" width="700px" controls><source src="vv3.mp4" type="video/mp4"> </video><video height="400px" width="700px" controls><source src="vv4.mp4" type="video/mp4"></video>
+  </marquee>
+  <h3>We're updating our websute, come back later for more content.<br>THANKYOU!</h3><br><br><br>
+  <h2><b>Pen It Down</b></h2><br>
+  <h3>For Poems ,you can either visit us at <a href="ell2.html" target="_blank">Elayne Poetry </a> OR <a href="https://www.poetryfoundation.org/poems/browse#page=1&sort_by=recently_added" target="_blank">Here.</a></h3>
+  <h3>For Stories , you can either visit us at <a href="ell3.html" target="_blank"> Elayne Stories </a>OR <a href="https://www.storynory.com/category/stories/page/2/" target="_blank">Here</a></h3><br>
+
+    <form>
+      <h2>For Updates, Fill In The Form:</h2><br>
+      <label for="f">First Name: </label>
+      <input type="text" id="f" name="f"><br>
+      <label for="l">Last Name: </label>
+      <input type="text" id="l" name="l"><br>
+      <label for="ag">Age: </label>
+      <input type="number" id="ag" name="ag"><br>
+      <h3>Gender</h3><br>
+      <input type="radio" id="male" name="m" value="Male">
+      <label for="male">MALE</label><br>
+      <input type="radio" id="female" name="f" value="Female">
+      <label for="female">FEMALE</label><br>
+      <input type="radio" id="PNS" name="pns" value="pns">
+      <label for="PNS">Prefer Not To Say</label><br>
+      <label for="n">E-Mail: </label>
+      <input type="text" id="n" name="n"><br>
+      <h3>Are you an already existing user?</h3><br>
+      <input type="checkbox" id="yes" name="yes" value="y">
+      <label for="yes"> YES </label><br>
+      <input type="checkbox" id="no" name="no" value="n">
+      <label for="no">NO</label><br>
+      <input type="submit" value="OK">
+  
+  </form>
+<canvas id="can1" height="200px" width="200px"></canvas>
+<h3>Find your Current location</h3>  
+<button onclick="getlocation()">Click me</button>  
+<div id="location"></div>  
+<script>  
+    var x= document.getElementById("location");  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+    function getlocation() {  
+        if(navigator.geolocation){  
+            alert("your browser is supporting Geolocation API")  
+        }  
+        else  
+        {  
+            alert("Sorry! your browser is not supporting")  
+        }  
+    }  
+</script> 
+  <footer>
+    <h3>Created By @Nandini</h3>
+</footer>
+
+</body>
