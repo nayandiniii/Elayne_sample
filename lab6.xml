@@ -1,0 +1,68 @@
+<?xml  version="1.0" encoding="UTF-8"?>
+
+<elayne>
+<user>
+   <userid>1</userid>
+   <username>Nandini</username>
+   <useraddress>BLR</useraddress>
+   <userinterest>painting</userinterest>
+   <userprof>student</userprof>
+   <role>editor</role>
+</user>
+<user>
+   <userid>2</userid>
+   <username>vanshika</username>
+   <useraddress>chd</useraddress>
+   <userinterest>writing</userinterest>
+   <userprof>graduate</userprof>
+   <role>editor</role>
+</user>
+<user>
+   <userid>3</userid>
+   <username>shreeya</username>
+   <useraddress>snr</useraddress>
+   <userinterest>story</userinterest>
+   <userprof>student</userprof>
+   <role>editor</role>
+</user>
+<user>
+   <userid>4</userid>
+   <username>nitendra</username>
+   <useraddress>BLR</useraddress>
+   <userinterest>poetry</userinterest>
+   <userprof>student</userprof>
+   <role>editor</role>
+</user>
+<user>
+   <userid>5</userid>
+   <username>himanshu</username>
+   <useraddress>jpr</useraddress>
+   <userinterest>painting</userinterest>
+   <userprof>student</userprof>
+   <role>editor</role>
+</user>
+<user>
+   <userid>6</userid>
+   <username>yash</username>
+   <useraddress>hr</useraddress>
+   <userinterest>painting</userinterest>
+   <userprof>student</userprof>
+   <role>editor</role>
+</user>
+<user>
+   <userid>7</userid>
+   <username>tusharika</username>
+   <useraddress>hp</useraddress>
+   <userinterest>all</userinterest>
+   <userprof>teacher</userprof>
+   <role>admin</role>
+</user>
+<user>
+   <userid>8</userid>
+   <username>ishan</username>
+   <useraddress>pb</useraddress>
+   <userinterest>poetry</userinterest>
+   <userprof>student</userprof>
+   <role>editor</role>
+</user>
+</elayne>
