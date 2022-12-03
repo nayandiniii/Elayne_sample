@@ -1,0 +1,132 @@
+<!DOCTYPE hmtl>
+<html>
+    <head>
+        <title>Elayne | Home</title>
+        <link rel="stylesheet" href="javas.css">
+        <link rel="icon" type="image/x-icon" href="huge.png">
+    </head>
+    <body>
+    <h1><b><i> E L A Y N E</i></b></h1>
+<body>
+    <h1><b> POTERY </b></h1>
+    <div id="left1">
+      <table class="tab2"><b><i>
+        <td><a href="ell.html" target="_blank">HOME</a></td>
+            <td><a href="ell4.html" target="_blank">PHOTOGRAPHY</a></td>
+            <td><a href="ell2.html" target="_blank">POETRY</a></td>
+            <td><a href="ell3.html" target="_blank">STORIES</a></td>
+      </i></b>
+      </table>
+    </div><br><br>
+    <div id="middle">
+        <marquee behavior="scroll" scrollamount="7" class="infinite">
+            <img src="p1.avif" height="200px" width="200px"> <img src="p2.avif" height="200px" width="200px"> <img src="p3.avif" height="200px" width="200px"> <img src="p4.avif" height="200px" width="200px"><br><br>
+            </marquee>
+            <marquee behavior="scroll" scrollamount="6" class="infinite" direction="right">
+            <img src="p5.avif" height="200px" width="200px"> <img src="p6.avif" height="200px" width="200px"> <img src="p7.avif" height="200px" width="200px"> <img src="p8.avif" height="200px" width="200px"></marquee>
+
+    </div><br><br>
+        <h1> form validation using regular expression</h1><br>
+        <p>JavaScript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web, alongside 
+            HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries.
+             All major web browsers have a dedicated JavaScript engine to execute the code on users' devices.JavaScript is a high-level, often just-in-time
+              compiled language that conforms to the ECMAScript standard.[10] It has dynamic typing, prototype-based object-orientation, and first-class functions. 
+              It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for 
+              working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM).
+            The ECMAScript standard does not include any input/output (I/O), such as networking, storage, or graphics facilities. In practice, the web browser or 
+            other runtime system provides JavaScript APIs for I/O.JavaScript engines were originally used only in web browsers, but are now core components of some
+             servers and a variety of applications. The most popular runtime system for this usage is Node.js.
+            Although Java and JavaScript are similar in name, syntax, and respective standard libraries, the two languages are distinct and differ greatly in design</p>
+        <h2>form validation</h2>
+        <p><pre>JavaScript provides a way to validate form's data on the client's computer before sending it to the web server.
+            Form validation generally performs two functions.A regular expression is a pattern of characters.The pattern is used
+             to do pattern-matching "search-and-replace" functions on text.In JavaScript, a RegExp Object is a pattern with Properties and Methods.</pre></p>
+                <h1>Registration</h1>
+                <script>
+                    function verifyDetails() {
+                      alert("Form Submitted Successfully");
+                      var unm = document.getElementById("usernm").value;
+                      var pw = document.getElementById("pswd").value;
+                      var cpw = document.getElementById("cpswd").value;
+                      var user = document.getElementById("e").value;
+                    
+                      var reg_email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                      var reg_username = /^[a-zA-Z]+$/;
+                      var strongPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})/;
+                      var mediumPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{6,})|((?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9])(?=.{8,}))/;
+                    
+                    
+                      // check for valid email address
+                          var user2 = document.getElementById("e");
+                          var unm2 = document.getElementById("usernm");
+                          var passw1 = document.getElementById("pswd");
+                                       
+                      // check for username
+                      if(unm == "") {
+                        alert("Username Cannot be Empty!");
+                        return false;
+                      }
+                      //check empty password field
+                      if(pw == "") {
+                        alert ("Password Cannot be Blank!"); 
+                        return false;
+                      }
+                      
+                     //minimum password length validation
+                      if(pw.length < 8) {
+                        alert ("Password Length is too short!");
+                        return false;
+                      }
+                    //maximum length of password validation
+                      if(pw.length > 15) {
+                         alert("Password length must not exceed 15 characters");
+                         return false;
+                      }
+                      if(cpw != pw){
+                        alert("Passwords Do Not Match!");
+                        return false;
+                      }
+                      // valid email
+                      if (reg_email.test(user)) {
+                                }
+                                else {
+                                    user2.style.border = "red solid 3px";
+                                    return false;
+                                }
+                      //check for valid username
+                        if (reg_username.test(unm)) {
+                        } else {
+                          unm2.style.border = "red solid 3px";
+                          return false;
+                        }
+                      }
+                        //captcha
+                        //password strength
+                        if(strongPassword.test(pw)) {
+                            passw1.style.border = "green solid 3px";
+                        } else if(mediumPassword.test(pw)) {
+                            passw1.style.border = 'blue solid 3px';
+                        } else {
+                            passw1.style.border = 'red solid 3px';
+                        }
+                    </script>
+                      <form id="signUpForm" onsubmit="return verifyDetails()">
+                        <label>USERNAME</label><br>
+                        <input type="text" placeholder="Username" required><br>
+                        <span id="uname"></span>
+                        <label>PASSWORD</label><br>
+                        <input type="password" placeholder="Password" /><br>
+                        <label>CONTACT NO.</label><br>
+                        <input type="number" placeholder="contact no"><br>
+                        <label>E-MAIL</label><br>
+                        <input type="text" placeholder="Email" id = "e"/><br>
+                        <input type="password" placeholder="Confirm Password" id="cpswd"/><br>
+                        
+                          <button type="submit" class="btn">Sign In</button>
+                      </form>
+    </body>
+    <footer>
+        <h3>Created By @Nandini</h3>
+    </footer>
+    
+</html>
