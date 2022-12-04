@@ -9,7 +9,7 @@
 h1{
     font-family: bebas;
     font-size: 65px;
-    color: rgb(231, 190, 115);
+    color: rgb(157, 183, 243);
     text-align: center;
     text-shadow: 2px 2px 4px grey;
 }
@@ -17,8 +17,8 @@ p{
     font-family: 'Times New Roman', Times, serif;
     font-size: 18px;
     color: white;
-    background-color: rgb(242, 226, 197);
-    border: 3.5px solid rgb(231, 190, 115);
+    background-color: pink;
+    border: 3.5px solid rgb(157,183,243);
     text-align: center;
 }
 table,tr,th,td{
@@ -48,7 +48,7 @@ a:hover,a:active{
     display: block;
 }
 h2{
-    color:rgb(231, 190, 115);
+    color:rgb(157, 183, 243);
     background-color: white;
     font-family: 'Times New Roman', Times, serif;
     font-size: 30px;
@@ -56,13 +56,13 @@ h2{
     width: fit-content;
 }
 li{
-    color: rgb(242, 226, 197);
+    color: rgb(157, 183, 243);
     font-size: 20px;
     text-align: center;
 }
 h3{
     background-color: white;
-    color: rgb(231, 190, 115);
+    color: pink;
     text-align: center;
 }
 #left1{
@@ -152,6 +152,6 @@ input{
 }
 footer{
     background-color: white;
-    color: rgb(242, 226, 197);
-    border: 3px solid rgb(231, 190, 115) ;
+    color: rgb(189, 204, 239);
+    border: 3px solid pink ;
 }
