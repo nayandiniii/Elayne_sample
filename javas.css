@@ -134,8 +134,9 @@ h3{
     color: white;
 }
 body{
-    background-image: url("bg5.jpeg");
+    background-image: url("b5.jpg");
     backdrop-filter: blur(2.5px);
+    background-size: contain;
 
 }
 form{
