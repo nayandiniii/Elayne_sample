@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <head>
+      
+
+      <script>
+        function verification() {
+          var unm = document.getElementById("usernm").value;
+          var pw = document.getElementById("pswd").value;
+          var cpw = document.getElementById("cpswd").value;
+          var user = document.getElementById("e").value;
+          var num= document.getElementById("pn").value;
+        
+          var reg_email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+          var reg_username = /^[a-zA-Z]+$/;
+          var strongPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})/;
+        
+          // check for valid email address
+              var user2 = document.getElementById("e");
+              var unm2 = document.getElementById("usernm");
+              var passw1 = document.getElementById("pswd");
+                           
+          // check for username
+          if(unm == "") {
+            alert("Username Cannot be Empty!");
+            return false;
+          }
+          if(num.length<10){
+            alert("Please enter valid phone number");
+            return false;
+          }
+          if(num.length>10){
+            alert("Enter a valid number(avoid country code)");
+            return false;
+          }
+          //check empty password field
+          if(pw == "") {
+            alert ("Password Cannot be Blank!"); 
+            return false;
+          }
+          
+         //minimum password length validation
+          if(pw.length < 8) {
+            alert ("Password Length is too short!");
+            return false;
+          }
+        //maximum length of password validation
+          if(pw.length > 15) {
+             alert("Password length must not exceed 15 characters");
+             return false;
+          }
+          if(cpw != pw){
+            alert("Passwords Do Not Match!");
+            return false;
+          }
+          // valid email
+          if (reg_email.test(user)) {
+                    }
+                    else {
+                      alert("Invalid E-Mail");
+                        user2.style.border = "maroon solid 3px";
+                        return false;
+                    }
+          //check for valid username
+            if (reg_username.test(unm)) {
+            } else {
+              unm2.style.border = "maroon solid 3px";
+              return false;
+            }
+        }
+            //password strength
+            if(strongPassword.test(pw)) {
+                passw1.style.border = "blue solid 3px";
+            } else {
+                passw1.style.border = 'red solid 3px';
+            }
+            document.cookie = "name=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+
+//below code is to set values to the cookies 
+setCookie("name",name,2);
+setCookie("email",email,2);
+setCookie("phone",phone,2);
+setCookie("color",colors,2);
+setCookie("img",img,2);
+
+//to set values in local storage
+
+localStorage.setItem("subject",subject);
+localStorage.setItem("message",msg);
+
+
+
+alert("Form submitted successfully");
+checkCookie();
+function setvalues()
+{
+document.getElementById("name").innerHTML=getCookie("name");
+document.getElementById("email").innerHTML=getCookie("email");
+document.getElementById("phone").innerHTML=getCookie("phone");
+document.getElementById("sub").innerHTML=localStorage.getItem("subject");
+document.getElementById("msg").innerHTML=localStorage.getItem("message");
+document.getElementById("details").innerHTML=listCookies();
+document.getElementById("imgdips").src =getCookie("img");
+
+
+}
+
+check(getCookie("color"));
+
+function addval()
+{
+var ref=document.getElementById('newelement').value;
+var ref2=document.getElementById('newelement2').value;
+
+if(ref=="" || ref2=="")
+{
+alert("Values cannot be empty");
+}
+
+
+else if(ref=="name" || ref=="phone" || ref=="email" || ref=="subject" || ref==msg)
+{
+alert("Primary valus cant be modified");
+}
+else
+{
+setCookie(ref,ref2,2);
+location.reload();
+}
+
+
+}
+
+
+function remove()
+{
+var ref3=document.getElementById('del').value;
+
+
+if(ref3=="")
+{
+alert("Values cannot be empty");
+}
+
+
+else if(ref3=="name" || ref3=="phone" || ref3=="email" || ref3=="subject" || ref3=="msg" || ref3=="img" || ref3=="color")
+{
+alert("Primary valus cant be deleted");
+}
+else
+{
+document.cookie = ref3+"=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+location.reload();
+}
+
+
+}
+
+
+
+
+
+
+function checkCookie() {
+let username = getCookie("name");
+if (username != "") {
+
+setvalues();
+} else {
+alert("No Recent users data found");
+}
+}
+
+
+
+
+function getCookie(cname) {
+let name = cname + "=";
+let decodedCookie = decodeURIComponent(document.cookie);
+let ca = decodedCookie.split(';');
+for(let i = 0; i <ca.length; i++) {
+let c = ca[i];
+while (c.charAt(0) == ' ') {
+c = c.substring(1);
+}
+if (c.indexOf(name) == 0) {
+return c.substring(name.length, c.length);
+}
+}
+return "";
+}
+
+
+function setCookie(cname, cvalue, exdays) {
+const d = new Date();
+d.setTime(d.getTime() + (exdays*24*60*60*1000));
+let expires = "expires="+ d.toUTCString();
+document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+
+function listCookies() {
+var theCookies = document.cookie.split(';');
+var aString = '';
+for (var i = 1 ; i <= theCookies.length; i++) {
+
+
+aString += i + ' ' + theCookies[i-1] + "<br><br>";
+
+
+}
+return aString;
+}
+
+function check(x) {
+elements = document.getElementsByClassName("div1");
+for (var i = 0; i < elements.length; i++) {
+elements[i].style.backgroundColor=x;
+}
+}
+        </script>
+</head>
+        <title>Elayne | Home</title>
+        <link rel="stylesheet" href="javas.css">
+        <link rel="icon" type="image/x-icon" href="huge.png">
+    </head>
+   
+<body onload="checkCookie()">
+  <button onclick="myFunction()">Try it</button>
+    <h1><b><i> E L A Y N E</i></b></h1>
+    <h1><b> POETRY </b></h1>
+    <div id="left1">
+      <table class="tab2"><b><i>
+        <td><a href="ell.html" target="_blank">HOME</a></td>
+            <td><a href="ell4.html" target="_blank">PHOTOGRAPHY</a></td>
+            <td><a href="ell2.html" target="_blank">POETRY</a></td>
+            <td><a href="ell3.html" target="_blank">STORIES</a></td>
+      </i></b>
+      </table>
+    </div><br><br>
+    <div id="middle">
+        <marquee behavior="scroll" scrollamount="7" class="infinite">
+            <img src="p1.avif" height="200px" width="200px"> <img src="p2.avif" height="200px" width="200px"> <img src="p3.avif" height="200px" width="200px"> <img src="p4.avif" height="200px" width="200px"><br><br>
+            </marquee>
+            <marquee behavior="scroll" scrollamount="6" class="infinite" direction="right">
+            <img src="p5.avif" height="200px" width="200px"> <img src="p6.avif" height="200px" width="200px"> <img src="p7.avif" height="200px" width="200px"> <img src="p8.avif" height="200px" width="200px"></marquee>
+
+    </div><br><br>
+    <table class="tab3"><b><i>
+      <th>AUDIOBOOKS</th>
+      <tr>
+      <td>Marie   <audio src="marie.mp3" controls=controls></audio></td></tr>
+      <tr>
+          <td>Everyman   <audio src="everyman.mp3" controls=controls></audio></td></tr>
+      <tr>
+          <td>The Lost Boy   <audio src="lost.mp3" controls=controls></audio></td></tr>
+    </i></b></table><br><br><br>
+    <h2>Videos</h2>
+     <marquee behavior="scroll" scrollamount="6" repeat="yes">
+      <video height="400px" width="700px" controls><source src="vv1.mp4" type="video/mp4"></video> <video height="400px" width="700px" controls><source src="vv2.mp4" type="video/mp4"> </video><video height="400px" width="700px" controls><source src="vv3.mp4" type="video/mp4"> </video><video height="400px" width="700px" controls><source src="vv4.mp4" type="video/mp4"></video>
+    </marquee>
+    <h3>We're updating our websute, come back later for more content.<br>THANKYOU!</h3><br><br><br>
+    <h2><b>Pen It Down</b></h2><br>
+    <h3>For Poems ,you can either visit us at <a href="ell2.html" target="_blank">Elayne Poetry </a> OR <a href="https://www.poetryfoundation.org/poems/browse#page=1&sort_by=recently_added" target="_blank">Here.</a></h3>
+    <h3>For Stories , you can either visit us at <a href="ell3.html" target="_blank"> Elayne Stories </a>OR <a href="https://www.storynory.com/category/stories/page/2/" target="_blank">Here</a></h3><br>
+
+
+</html>
