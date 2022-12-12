@@ -133,12 +133,7 @@ h3{
     align-items: center;
     color: white;
 }
-body{
-    background-image: url("b5.jpg");
-    backdrop-filter: blur(2.5px);
-    background-size: contain;
 
-}
 form{
 
     backdrop-filter: blur(10px);

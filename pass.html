@@ -1,0 +1,179 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" type="text/html">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Elayne | NewsLetter</title>
+        <link rel="stylesheet" href="new.css">
+        <link rel="icon" type="image/x-icon" href="huge.png">
+    </head>
+    <body>
+        <h1><b><i> E L A Y N E</i></b></h1>
+    <h1><b> NEWSLETTER </b></h1>
+    <div id="left1">
+      <table class="tab2"><b><i>
+        <td><a href="ell.html" target="_blank">HOME</a></td>
+            <td><a href="ell4.html" target="_blank">PHOTOGRAPHY</a></td>
+            <td><a href="ell2.html" target="_blank">POETRY</a></td>
+            <td><a href="ell3.html" target="_blank">STORIES</a></td>
+      </i></b>
+      </table>
+    </div><br><br>
+    <div id="middle">
+        <marquee behavior="scroll" scrollamount="7" class="infinite">
+            <img src="p1.avif" height="200px" width="200px"> <img src="p2.avif" height="200px" width="200px"> <img src="p3.avif" height="200px" width="200px"> <img src="p4.avif" height="200px" width="200px"><br><br>
+            </marquee>
+            <marquee behavior="scroll" scrollamount="6" class="infinite" direction="right">
+            <img src="p5.avif" height="200px" width="200px"> <img src="p6.avif" height="200px" width="200px"> <img src="p7.avif" height="200px" width="200px"> <img src="p8.avif" height="200px" width="200px"></marquee>
+
+    </div><br><br>
+    <h3>We're updating our websute, come back later for more content.<br>THANKYOU!</h3><br><br><br>
+    <h2><b>Pen It Down</b></h2><br>
+    <h3>For Poems ,you can either visit us at <a href="ell2.html" target="_blank">Elayne Poetry </a> OR <a href="https://www.poetryfoundation.org/poems/browse#page=1&sort_by=recently_added" target="_blank">Here.</a></h3>
+    <h3>For Stories , you can either visit us at <a href="ell3.html" target="_blank"> Elayne Stories </a>OR <a href="https://www.storynory.com/category/stories/page/2/" target="_blank">Here</a></h3><br>
+</html><form name = "myform" action = "" onsubmit="return verification()">
+    <h2>Enter your details to subscribe to newsletter!</h2><br>
+    Enter name: <input type = "text" name = "customer" id="usernm"/><br>
+    Enter age: <input type = 'number' name="age" id="pn"/><br><br>
+    <label>E-Mail address:</label>
+    <input type="text" placeholder="Email" id = "e"/><br>
+    <label>Contact Number</label>
+    <input type="number" placeholder="Contact Number" id="pn"/><br>
+    <label>Create a Password</label>
+    <input type="password" pattern ="(?=^.{8,}$)(?=.*\d)(?=.*[!@#$%^&*]+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title = "Weak Password!" placeholder="Password" id ="pswd" required/>
+    <input type="password" placeholder="Confirm Password" id="cpswd"/><br>
+    <select id="color" onchange="display()">  
+    <option value="Select Color">Select Color</option>  
+    <option value="black">Black</option>  
+    <option value="grey">Grey</option>  
+    <option value="beige">Beige</option>  
+    </select> <br>
+    <button type="submit" onsubmit="return checkform(this);" class="btn">I Am Sure</button><br>
+    <input type = "button" value = "SUBSCRIBE" onclick = "setCookie()"/><br><br>
+    <input type = "button" value = "Get Details" onclick = "getcookie()"/><br><br>
+
+
+
+    <script>
+        function verification() {
+    var unm = document.getElementById("usernm").value;
+    var pw = document.getElementById("pswd").value;
+    var cpw = document.getElementById("cpswd").value;
+    var user = document.getElementById("e").value;
+    var num= document.getElementById("pn").value;
+  
+    var reg_email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    var reg_username = /^[a-zA-Z]+$/;
+    var strongPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})/;
+  
+    // check for valid email address
+        var user2 = document.getElementById("e");
+        var unm2 = document.getElementById("usernm");
+        var passw1 = document.getElementById("pswd");
+                     
+    // check for username
+    if(unm == "") {
+      alert("Username Cannot be Empty!");
+      return false;
+    }
+    if(num.length<10){
+      alert("Please enter valid phone number");
+      return false;
+    }
+    if(num.length>10){
+      alert("Enter a valid number(avoid country code)");
+      return false;
+    }
+    //check empty password field
+    if(pw == "") {
+      alert ("Password Cannot be Blank!"); 
+      return false;
+    }
+    
+   //minimum password length validation
+    if(pw.length < 8) {
+      alert ("Password Length is too short!");
+      return false;
+    }
+  //maximum length of password validation
+    if(pw.length > 15) {
+       alert("Password length must not exceed 15 characters");
+       return false;
+    }
+    if(cpw != pw){
+      alert("Passwords Do Not Match!");
+      return false;
+    }
+    // valid email
+    if (reg_email.test(user)) {
+              }
+              else {
+                alert("Invalid E-Mail");
+                  user2.style.border = "maroon solid 3px";
+                  return false;
+              }
+    //check for valid username
+      if (reg_username.test(unm)) {
+      } else {
+        unm2.style.border = "maroon solid 3px";
+        return false;
+      }
+  }
+      //password strength
+      if(strongPassword.test(pw)) {
+          passw1.style.border = "blue solid 3px";
+      } else {
+          passw1.style.border = 'red solid 3px';
+      }
+      document.cookie = "name=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+
+      function setCookie()
+      {
+      var now = new Date();
+      now.setMonth( now.getMonth() - 1 );
+      cookievalue1 = escape(document.myform.customer.value) + ";"
+      cookievalue2 = escape(document.myform.age.value) + ";"
+      
+      document.cookie = "name=" + cookievalue1;
+      document.cookie = "expires=" + now.toUTCString() + ";"
+      document.cookie = "age=" + cookievalue2;
+      document.cookie = "expires=" + now.toUTCString() + ";"
+      document.write ("\nSetting Cookies : " + "name=" + cookievalue1 + "expires=" + now.toUTCString());
+      document.write ("\nSetting Cookies : " + "age=" + cookievalue2 );
+      }
+      function display()  
+      {  
+          var value = document.getElementById("color").value;  
+          if (value != "Select Color")  
+          {  
+              document.bgColor = value;  
+              document.cookie = "color=" + value;  
+          }  
+      }  
+      
+      function getcookie()
+      { 
+          var allcookies = document.cookie;
+          document.write ("All Cookies : " + allcookies );
+          
+          // Get all the cookies pairs in an array
+          cookiearray = allcookies.split(';');
+          
+          // Now take key value pair out of this array
+          for(var i=0; i<cookiearray.length; i++) {
+             name = cookiearray[i].split('=')[0];
+             value = cookiearray[i].split('=')[1];
+             document.write ("\nKey is : " + name + " and Value is : " + value);
+          }
+      }
+      
+      function deleteCookie()  
+      {  
+          document.cookie=cookievalue1+";max-age=0"; 
+          cookievalue1=document.cookie;  
+          document.cookie=cookievalue2+";max-age=0"; 
+          cookievalue2=document.cookie;
+        alert("Cookies is deleted");  
+      }  
+    </script>
+<footer>
