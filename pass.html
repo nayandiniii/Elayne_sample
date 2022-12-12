@@ -47,7 +47,13 @@
     <option value="black">Black</option>  
     <option value="grey">Grey</option>  
     <option value="beige">Beige</option>  
-    </select> <br>
+    </select> <br><br>
+    <label for="color">Theme</label>
+    <select name="" id="backImg" onchange="backImage()">
+        <option value="blur">blur</option>
+        <option value="light">light</option>
+        <option value="gradient">gradient</option>
+    </select><br><br>
     <button type="submit" onsubmit="return checkform(this);" class="btn">I Am Sure</button><br>
     <input type = "button" value = "SUBSCRIBE" onclick = "setCookie()"/><br><br>
     <input type = "button" value = "Get Details" onclick = "getcookie()"/><br><br>
@@ -151,6 +157,11 @@
           }  
       }  
       
+      function backImage() {
+            var someTime = "Thu, 22 Dec 2022 12:00:00 UTC"
+            var bgImg = document.getElementById('backImg').value
+            document.cookie = "BackImg=" + bgImg + ";expires=" + someTime + ";path=/;"
+        }
       function getcookie()
       { 
           var allcookies = document.cookie;
