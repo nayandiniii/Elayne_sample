@@ -1,162 +1,78 @@
-<!DOCTYPE hmtl>
-<html>
-    <head>
-        <title>Elayne | Home</title>
-        <link rel="stylesheet" href="catp.css">
-        <link rel="icon" type="image/x-icon" href="huge.png">
-        <script src=
-"https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
-    </script>
-    </head>
-    <body>
-    <h1><b><i> E L A Y N E </i></b><BR>POETRY<br><br><br>
-        <div id="left1">
-            <table class="tab2"><b><i>
-              <td><a href="ell.html" target="_blank">  HOME  </a></td>
-                  <td><a href="ell4.html" target="_blank">  PHOTOGRAPHY  </a></td>
-                  <td><a href="ell2.html" target="_blank">  POETRY  </a></td>
-                  <td><a href="ell3.html" target="_blank">  STORIES  </a></td>
-            </i></b>
-            </table>
-          </div></h1>
-    <div id="middle">
-        <marquee behavior="scroll" scrollamount="5" class="infinite">
-            <img src="bb1.jpg" height="200px" width="200px"> <img src="bb2.jpg" height="200px" width="200px"> <img src="bb3.jpg" height="200px" width="200px"> <img src="bb4.jpg" height="200px" width="200px"><br><br>
-        </marquee>
-            <marquee behavior="scroll" scrollamount="5" class="infinite" direction="right">
-            <img src="bb5.jpg" height="200px" width="200px"> <img src="bb6.jpg" height="200px" width="200px"> <img src="bb7.jpg" height="200px" width="200px"> <img src="bb8.jpg" height="200px" width="200px">
-        </marquee>
-
-    </div><br><br>
-   <table class="tab3"><b><i>
-    <th>AUDIOBOOKS</th>
-    <tr>
-    <td>Marie   <audio src="marie.mp3" controls=controls></audio></td></tr>
-    <tr>
-        <td>Everyman   <audio src="everyman.mp3" controls=controls></audio></td></tr>
-    <tr>
-        <td>The Lost Boy   <audio src="lost.mp3" controls=controls></audio></td></tr>
-  </i></b></table><br><br><br>
-  <h2>Videos</h2>
-   <marquee behavior="scroll" scrollamount="6" repeat="yes">
-    <video height="400px" width="700px" controls><source src="vv1.mp4" type="video/mp4"></video> <video height="400px" width="700px" controls><source src="vv2.mp4" type="video/mp4"> </video><video height="400px" width="700px" controls><source src="vv3.mp4" type="video/mp4"> </video><video height="400px" width="700px" controls><source src="vv4.mp4" type="video/mp4"></video>
-  </marquee>
-  <h3>We're updating our websute, come back later for more content.<br>THANKYOU!</h3><br><br><br>
-  <h2><b>Pen It Down</b></h2><br>
-  <h3>For Poems ,you can either visit us at <a href="ell2.html" target="_blank">Elayne Poetry </a> OR <a href="https://www.poetryfoundation.org/poems/browse#page=1&sort_by=recently_added" target="_blank">Here.</a></h3>
-  <h3>For Stories , you can either visit us at <a href="ell3.html" target="_blank"> Elayne Stories </a>OR <a href="https://www.storynory.com/category/stories/page/2/" target="_blank">Here</a></h3><br>
-  <h2>For Updates, Fill In The Form:</h2><br>
-    <form id="form1"><br><br>
-      <label for="f">First Name: </label>
-      <input type="text" id="f" name="f"><br>
-      <label for="l">Last Name: </label>
-      <input type="text" id="l" name="l"><br>
-      <label for="ag">Age: </label>
-      <input type="number" id="ag" name="ag"><br>
-      <h4>Gender</h4><br>
-      <input type="radio" id="male" name="m" value="Male">
-      <label for="male">MALE</label><br>
-      <input type="radio" id="female" name="f" value="Female">
-      <label for="female">FEMALE</label><br>
-      <input type="radio" id="PNS" name="pns" value="pns">
-      <label for="PNS">Prefer Not To Say</label><br>
-      <label for="n">E-Mail: </label>
-      <input type="text" id="n" name="n"><br>
-      <h4>Are you an already existing user?</h4><br>
-      <input type="checkbox" id="yes" name="yes" value="y">
-      <label for="yes"> YES </label><br>
-      <input type="checkbox" id="no" name="no" value="n">
-      <label for="no">NO</label><br>
-      <input type="submit" value="OK">
-  
-  </form>
-
-  <form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elayne | Information</title>
+    <script src="catp.min.js"></script>
+    <script src="catp.js"></script>
+    <link rel="stylesheet" href="catp.css">
+</head>
+<body ng-app="Packages">
+    <div ng-controller="Packagesctrl">
+        <header>
+            <div class="navbar">
+                <h1><b><i> E L A Y N E </i></b><BR>POETRY<br><br><br>
+                    <div ng-controller="Packagesctrl">
+                    <div id="left1">
+                        <table class="tab2"><b><i>
+                          <td><a href="ell.html" target="_blank">  HOME  </a></td>
+                              <td><a href="ell4.html" target="_blank">  PHOTOGRAPHY  </a></td>
+                              <td><a href="ell2.html" target="_blank">  POETRY  </a></td>
+                              <td><a href="ell3.html" target="_blank">  STORIES  </a></td>
+                        </i></b>
+                        </table>
+                      </div></h1>
+        </header>
+        <br>
+        Rows to display:  <input type="number" step="1" min="0" max="7" ng-model="rowlimit"/><br><br>
+        Search:  <input type="text" placeholder="Search for item" ng-model="search"><br><br>
+        Enter the number of characters:  <input type="text" placeholder="Enter no. of characters" ng-model="limit"><br><br>
+        <table>
+            <tr>
+                <th>FirstName
+                    <br>
+                    <input type="text" ng-model="search.fname" placeholder="Search firstname">
+                </th>
+                <th>LastName
+                    <br>
+                    <input type="text" ng-model="search.lname" placeholder="Search lastname">
+                </th>
+                <th>ID
+                    <br>
+                    <input type="text" ng-model="search.id" placeholder="Search id">
+                </th>
+                <th>Title
+                    <br>
+                    <input type="text" ng-model="search.title" placeholder="Search title">
+                </th>
+                <th>Year
+                    <br>
+                    <input type="text" ng-model="search.year" placeholder="Search year">
+                </th>
+                <th>Type
+                    <br>
+                    <input type="text" ng-model="search.type" placeholder="Search type">
+                </th>
+            </tr>
+            <tbody>
+                <tr ng-repeat="htl in info|limitTo:rowlimit|filter:search">
+                    <td>{{htl.fname|namefilter:limit}}</td>
+                    <td>{{htl.lname|namefilter:limit}}</td>
+                    <td>{{htl.id|uppercase}}</td>
+                    <td>{{htl.title|lowercase}}</td>
+                    <td>{{htl.year|number:0}}</td>
+                    <td>{{htl.type|uppercase}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     
-    <button onclick="second()">all the storytellers</button>
-    <button onclick="third()">poems before 1900</button>
-    <button onclick="fourth()">poems after 1900</button>
-    <button onclick="fifth()">last name is shakespeare</button>
+</body>
 
-    
-  </form>
-  <div ng-app="result" ng-controller="resultCtrl">
-  <pre>{{users|json}}</pre>
-    <ul>
-        <li ng-repeat="x in users | orderBy : 'id'">
-            {{x.fname + ", " + x.lname}}
-    </ul>}}</pre>
-    
-</div>
-  </body>
-  
-<script>
-    var app = angular.module('result', []);
-        app.controller('resultCtrl', function ($scope) {
-            $scope.users = 
-        {
-            fname:"PERCY",
-            lname:"SHELLEY",
-            id:001,
-            title:"OZYMANDIAS",
-            year:1818,
-            type:"POEM"
-        },
-        {
-            fname:"WILLIAM",
-            lname:"SHAKESPEARE",
-            id:002,
-            title:"SHALL I COMPARE THEE TO SUMMER",
-            year:1609,
-            type:"POEM"
-        },
-        {
-            fname:"MAYA",
-            lname:"ANGELOU",
-            id:003,
-            title:"AND STILL I RISE",
-            year:1978,
-            type:"POEM"
-        },
-        {
-            fname:"T.S.",
-            lname:"ELIOT",
-            id:004,
-            title:"THE WASTE LAND",
-            year:1922,
-            type:"POEM"
-        },
-        {
-            fname:"GEORGE",
-            lname:"ORWELL",
-            id:005,
-            title:"NINETEEN EIGHTY FOUR",
-            year:1949,
-            type:"STORY"
-        },
-        {
-            fname:"CHINUA",
-            lname:"ACHEBE",
-            id:006,
-            title:"THINGS FALLING APART",
-            year:1958,
-            type:"STORY"
-        };
-    });
-
-        users
-    .filter(user => user.id > 03)
-    .map(user => console.log(user.fname + ': ' + user.lname));
-    users
-    .filter(user => user.id > 10)
-    .map(user => console.log(user.fname + ': ' + user.lname));
-    users
-    .filter(user => user.type=="POEM")
-    .map(user => console.log(user.fname + ': ' + user.lname));
-   
-</script> 
-  <footer>
+<footer>
     <h3>Created By @Nandini</h3>
 </footer>
 
-</body>
+</html>
