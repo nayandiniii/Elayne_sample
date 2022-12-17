@@ -42,6 +42,43 @@ table,tr,th,td{
 a:link,:visited{
     color:gainsboro;
 }
+
+header .navbar {
+    display: flexbox;
+}
+
+header .navbar ul {
+    display: flex;
+}
+
+header .navbar ul li {
+    display: flex;
+    list-style: none;
+}
+
+header .navbar ul li a {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    padding: 20px;
+}
+
+header .navbar ul li a:hover {
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+}
+
+#login {
+    margin-left: 750px;
+    background-color: violet;
+    color: black;
+}
+
+#login:hover {
+    background-color: white;
+    border-radius: 20px;
+}
 a:hover,a:active{
     color: white;
 }
