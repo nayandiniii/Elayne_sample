@@ -1,0 +1,205 @@
+@font-face {
+    font-family: bebas;
+    src: url(bebas.ttf);
+}
+@font-face {
+    font-family: manrope;
+    src: url(manrope.otf);
+}
+h1{
+    font-family: bebas;
+    font-size: 65px;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 4px grey;
+    background-image: url("bb10.webp");
+    height: 50%;
+    width: 100%;
+}
+#form1{
+    background-image: url("bb7.jpg");
+    color: white;
+}
+p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    border: 3.5px solid grey;
+    text-align: center;
+}
+table,tr,th,td{
+    background-color: black;
+    border: 3px solid grey;
+    border-collapse: collapse;
+    color: white;
+    font-size: 17px;
+    padding: 15px;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+a:link,:visited{
+    color:gainsboro;
+}
+
+header .navbar {
+    display: flexbox;
+}
+
+header .navbar ul {
+    display: flex;
+}
+
+header .navbar ul li {
+    display: flex;
+    list-style: none;
+}
+
+header .navbar ul li a {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    padding: 20px;
+}
+
+header .navbar ul li a:hover {
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+}
+
+#login {
+    margin-left: 750px;
+    background-color: violet;
+    color: black;
+}
+
+#login:hover {
+    background-color: white;
+    border-radius: 20px;
+}
+a:hover,a:active{
+    color: white;
+}
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+.center1 {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+h2{
+    color:black;
+    background-color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    text-align: center;
+    width: fit-content;
+}
+li{
+    color: black;
+    font-size: 20px;
+    text-align: center;
+}
+h3{
+    background-color: white;
+    color: black;
+    text-align: center;
+}
+h4{
+    color: white;
+    text-align: center;
+}
+#left1{
+    float: inline-start;
+    background-color: black;
+    color: white;
+    font-family: bebas;
+    font-size: 20px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+#middle{
+    float: left;
+    border-radius: 5px;
+    margin: 50px;
+    padding: 0 7px 0 7px;
+    width: max-content;
+    border: 10px solid transparent;
+   
+}
+#right{
+    float: right;
+    border-radius: 5px;
+    margin: 50px;
+    padding: 0 7px 0 7px;
+    width: fit-content;
+    border: 10px solid transparent;
+}
+
+.tab2{
+    width: fit-content;
+    height: fit-content;
+    backdrop-filter: blur(10px);
+    border: 2px solid black;
+    border-collapse: collapse;
+    color: white;
+    font-size: 17px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.tab3{
+    width: 100%;
+    height: 500px;
+    background-image: url("bgi4.webp");
+    backdrop-filter: blur(8px);
+    border: 2px solid black;
+    border-collapse: collapse;
+    color: white;
+    font-size: 80px
+}
+.infinite{
+    animation: slide 3s linear infinite;
+    overflow: hidden;
+}
+.location{
+    text-align: center;
+    align-items: center;
+}
+.limit{
+    width: fit-content;
+}
+#demo{
+    font-size: 30px;
+}
+#can1{
+    border: 2px solid black;
+    background-color: rgb(242, 226, 197);
+    align-items: center;
+    color: white;
+}
+body{
+    background-color: white;
+
+}
+form{
+
+    backdrop-filter: blur(10px);
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    text-align: center;
+}
+input{
+    background-color:black;
+    color:grey;
+}
+footer{
+    background-color: white;
+    color: black;
+    border: 3px solid black;
+}

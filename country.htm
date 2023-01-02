@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <body>
+       
+    <div ng-controller="countryController">
+        <table style="border:1px solid #CCC; margin-top:10px">              
+            <tr>
+                <th>NAME</th>
+                <th>TYPE</th>
+            </tr>
+            <tr ng-repeat="country in countries | orderBy:'name'">
+                <td>{{country.name}}</td>
+                <td>{{country.type}}</td>
+            </tr>
+        </table>    
+    </div>  
+</body>
+</html>

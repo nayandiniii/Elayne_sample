@@ -1,0 +1,23 @@
+[
+    {
+        "name":"percy", 
+        "type":"poem"
+    },
+    {
+        "name":"william", 
+        "type":"poem"
+    },
+    {
+        "name":"george", 
+        "type":"story"
+    },
+    {
+        "name":"chinua", 
+        "type":"story"
+    },
+    {
+        "name":"maya", 
+        "type":"poem"
+    }
+   
+]

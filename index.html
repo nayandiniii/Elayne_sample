@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Elayne | Home</title>
+        <link rel="stylesheet" href="catp.css">
+        <link rel="icon" type="image/x-icon" href="huge.png">
+    </head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<script src="test.js"></script>
+<body ng-app="myApp">
+
+<p><a href="#/!">Main</a></p>
+
+<a href="#!london">London</a>
+<a href="#!paris">Paris</a>
+<a href="#!coun">Countries Table</a>
+<a href="#!search">Search</a>
+<p>Click on the links.</p>
+<div ng-view></div>
+
+<script>
+var app = angular.module("myApp", ["ngRoute"]);
+
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/", {
+        templateUrl : "main.htm",
+    })
+    .when("/london", {
+        templateUrl : "london.htm",
+        controller : "londonCtrl"
+    })
+    .when("/paris", {
+        templateUrl : "paris.htm",
+        controller : "parisCtrl"
+    })
+    .when("/coun", {
+        templateUrl : "country.htm",
+        controller : "countryController"
+    })
+    .when("/search", {
+        templateUrl : "test.html",
+        controller : "myCont"
+    });
+});
+app.controller("londonCtrl", function ($scope) {
+    $scope.msg = "I love London";
+});
+app.controller("parisCtrl", function ($scope) {
+    $scope.msg = "I love Paris";
+});
+
+app.controller('countryController', function($scope, $http) {                 
+    $http({
+        method: 'GET',
+        url: 'countries.json'
+        })
+        .then(function successCallback(response) {
+            $scope.countries = response.data;
+        }, function errorCallback(response) {
+            console.log('Something went wrong.');
+        }); 
+});
+var myController = function ($scope)
+     {
+        var info = [
+        {
+            fname:"PERCY",
+            lname:"SHELLEY",
+            id:001,
+            title:"OZYMANDIAS",
+            year:1818,
+            type:"POEM"
+        },
+        {
+            fname:"WILLIAM",
+            lname:"SHAKESPEARE",
+            id:002,
+            title:"SHALL I COMPARE THEE TO SUMMER",
+            year:1609,
+            type:"POEM"
+        },
+        {
+            fname:"MAYA",
+            lname:"ANGELOU",
+            id:003,
+            title:"AND STILL I RISE",
+            year:1978,
+            type:"POEM"
+        },
+        {
+            fname:"T.S.",
+            lname:"ELIOT",
+            id:004,
+            title:"THE WASTE LAND",
+            year:1922,
+            type:"POEM"
+        },
+        {
+            fname:"GEORGE",
+            lname:"ORWELL",
+            id:005,
+            title:"NINETEEN EIGHTY FOUR",
+            year:1949,
+            type:"STORY"
+        },
+        {
+            fname:"CHINUA",
+            lname:"ACHEBE",
+            id:006,
+            title:"THINGS FALLING APART",
+            year:1958,
+            type:"STORY"
+        }
+    ];
+     $scope.Emp = info;
+     };
+app.controller("myCont", myController);
+
+</script>
+
+</body>
+</html>
