@@ -20,11 +20,11 @@
                }
           </style>
      </head>
-     <body style="font-family:Arial; font-size:medium; color:darkblue">
+     <body style="font-family:Arial; font-size:medium; color:white">
           <div ng-controller="myCont">
                <h3>Search functionality in AngularJS.</h3>
                <br/>
-               <h3> Search Employee : <input type="text" ng-model= "searchEmp"/></h3>
+               <h3> Search Artist : <input type="text" ng-model= "searchEmp"/></h3>
                <br/><br/>
                <table>
                     <tr>
@@ -37,12 +37,12 @@
                          
                     </tr>
                     <tr ng-repeat="e in Emp | filter:searchEmp">
-                         <td>{{e.FirstName}}</td>
-                         <td>{{e.LastName}}</td>
-                         <td>{{e.ID}}</td>
-                         <td>{{e.Title}}</td>
-                         <td>{{e.Year}}</td>
-                         <td>{{e.Type}}</td>
+                         <td>{{e.fname}}</td>
+                         <td>{{e.lname}}</td>
+                         <td>{{e.id}}</td>
+                         <td>{{e.title}}</td>
+                         <td>{{e.year}}</td>
+                         <td>{{e.type}}</td>
                     </tr>
                </table>
           </div>
